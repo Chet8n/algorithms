@@ -33,19 +33,19 @@ struct Edge {
 
 /**
  * populates the dist vector with the distances from the source to resp nodes
- * return value : vector<int> --> nodes that are part of negativeCycle
+ * return value : set<int> --> nodes that are part of negativeCycle
  **/
-vector<int> bellmannFord(int nodeCount, vector<Edge> &edges, int source, vector<long long> &dist) {
+set<int> bellmannFord(int nodeCount, vector<Edge> &edges, int source, vector<long long> &dist) {
     dist = vector<long long>(nodeCount + 1, infl);
     dist[source] = 0;
 
-    vector<int> nodesInNegativeCycle;
+    set<int> nodesInNegativeCycle;
     for (int relax = 1; relax <= nodeCount; relax++) {
         for (Edge edge : edges) {
             if (dist[edge.u] < infl && dist[edge.u] + edge.wt < dist[edge.v]) {
                 dist[edge.v] = dist[edge.u] + edge.wt;
                 if (relax == nodeCount) {
-                    nodesInNegativeCycle.push_back(edge.u);
+                    nodesInNegativeCycle.insert(edge.u);
                 }
             }
         }
@@ -68,7 +68,10 @@ void solve() {
     }
 
     vector<long long> dist;
-    vector<int> nodesInNegativeCycle = bellmannFord(n, edges, 1, dist);
+    set<int> nodesInNegativeCycle = bellmannFord(n, edges, 1, dist);
+    for (auto x : nodesInNegativeCycle) {
+        cout << x << " ";
+    }
 }
 
 int32_t main() {
