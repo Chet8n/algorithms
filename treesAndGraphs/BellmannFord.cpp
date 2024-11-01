@@ -34,6 +34,10 @@ struct Edge {
 /**
  * populates the dist vector with the distances from the source to resp nodes
  * return value : set<int> --> nodes that are part of negativeCycle
+ * note : set<int> nodes --> may not contain all the nodes of negative cycle.
+ * but contains atleast one node or every negative cycle component.
+ * so if you run dfs/bfs from these nodes, then all the reachable nodes are
+ * also part of negative cycle.
  **/
 set<int> bellmannFord(int nodeCount, vector<Edge> &edges, int source, vector<long long> &dist) {
     dist = vector<long long>(nodeCount + 1, infl);
