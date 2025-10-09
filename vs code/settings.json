@@ -1,0 +1,83 @@
+{
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace",
+    "editor.fontWeight": "100",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "editor.lineHeight": 2.3,
+    "terminal.integrated.lineHeight": 2,
+    "terminal.integrated.fontSize": 15,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+    },
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000,
+    "editor.formatOnSave": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "java": false,
+        "cpp": false
+    },
+    "editor.rulers": [],
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit"
+    },
+    "java.format.onType.enabled": true,
+    "workbench.preferredLightColorTheme": "Default Dark Modern",
+    "C_Cpp.dimInactiveRegions": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "RainbowBrackets.depreciation-notice": false,
+    "RainbowBrackets.activeScopeCSS": [
+        "borderStyle : solid",
+        "borderWidth : 10px",
+        "borderColor : {color}; opacity: 0.5"
+    ],
+    "RainbowBrackets.consecutivePairColors": [
+        "()",
+        "[]",
+        "{}",
+        "<>",
+        [
+            "teal",
+            "yellow",
+            "tomato",
+            "lightblue",
+            "silver",
+            "lightgreen"
+        ],
+        "Revioletd"
+    ],
+    "workbench.colorCustomizations": {
+        "editor.background": "#1d1d1d"
+    },
+    "github.copilot.chat.commitMessageGeneration.instructions": [],
+    "editor.fontSize": 16.4,
+    "chat.editor.fontSize": 14,
+    "editor.tokenColorCustomizations": {
+        "[*Light*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#000"
+                    }
+                }
+            ]
+        },
+        "[*Dark*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#fff"
+                    }
+                }
+            ]
+        }
+    },
+    "redhat.telemetry.enabled": false,
+    "workbench.fontAliasing": "antialiased",
+}
